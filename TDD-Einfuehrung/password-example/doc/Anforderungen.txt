@@ -1,19 +1,11 @@
-Anforderungen an das Passwort:
-
-1. Mindestens 5 Zeichen lang
-2. Maximal 10 Zeichen lang
-3. Mindestens eine Ziffer (Digit)
-4. Kein Leerzeichen (Whitespace)
-5. Mindestens 1 Sonderzeichen (Non-Alphanumeric)
-6. Mindestens ein Buchstaben (Letter)
+Aus einem Gespräch mit dem Kunden ist eine Feature Entwicklung entstanden.
+Setze dieses Feature mit den Anforderungen nach dem TDD Prinzip um.
 
 
-Anforderungen an die Ausgabe:
+Kunde:
 
-Ist das eingegebene Passwort valide, folgender Text ausgeben:
-
-"The password is valid."
-
-Ist das eingegebene Passwort nicht valide, folgender Text ausgeben:
-
-"The password is NOT valid!"
+"Ich möchte ein Passwort in die Konsole eingeben können und danach informiert werden, ob das Passwort auch den Richtlinien entspricht.
+Es sollten schon nicht weniger als fünf Zeichen eingegeben werden, aber auch nicht mehr als zehn. Ansonsten wird das zu lang.
+Bei den Zeichen hab ich mir überlegt, dass schon von jeder Art eins dabei sein sollte. Also natürlich irgend eine Zahl und Buchstaben,
+aber auch Sonderzeichen wären sicher ganz gut. Aber Leerzeichen sollen bitte nicht möglich sein. Wenn das Passwort dann nicht stimmt
+möchte ich in der Konsole eine Ausgabe sehen, dass das nicht valide ist. Ansonsten soll da stehen, dass es in Ordnung ist."
