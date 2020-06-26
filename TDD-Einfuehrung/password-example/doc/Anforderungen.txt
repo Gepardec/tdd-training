@@ -1,5 +1,5 @@
 Aus einem Gespräch mit dem Kunden ist eine Feature Entwicklung entstanden.
-Setze dieses Feature mit den Anforderungen nach dem TDD Prinzip um.
+Erstelle eine Liste mit den Anforderungen und setze diese danach nach dem TDD-Prinzip um.
 
 
 Kunde:

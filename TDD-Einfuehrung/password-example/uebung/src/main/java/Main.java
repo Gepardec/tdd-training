@@ -4,7 +4,7 @@ import validator.PasswordValidator;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         PasswordInput passwordInput = new PasswordInput();
         PasswordValidator validator = new PasswordValidator();
         OutputFormatter outputFormatter = new OutputFormatter();
