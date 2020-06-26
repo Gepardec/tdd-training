@@ -1,2 +1,4 @@
 /.idea/
 *.iml
+/TDD-Einfuehrung/password-example/loesung/target/
+/TDD-Einfuehrung/password-example/uebung/target/
