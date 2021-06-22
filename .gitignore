@@ -2,3 +2,11 @@
 *.iml
 /TDD-Einfuehrung/password-example/loesung/target/
 /TDD-Einfuehrung/password-example/uebung/target/
+
+target
+
+# vs code generated
+.classpath
+.project
+.settings
+.vscode
