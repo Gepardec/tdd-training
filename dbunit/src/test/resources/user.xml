@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <USER userid='1' first_name='Mattias' last_name='Fa'/>
+    <USER userid='2' first_name='Max' last_name='Mustermann'/>
+    <USER userid='3' first_name='John' last_name='Doh'/>
+</dataset>
