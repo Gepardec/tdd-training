@@ -105,8 +105,7 @@ public class UserEndpointTest extends JerseyTest {
 
     @Test
     public void deleteUser() {
-        final Response response = target("users")
-            .path("1")
+        final Response response = target("users/1")
             .request()
             .method("DELETE");
     
