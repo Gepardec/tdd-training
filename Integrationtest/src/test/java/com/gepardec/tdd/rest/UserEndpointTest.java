@@ -1,6 +1,10 @@
 package com.gepardec.tdd.rest;
+import com.gepardec.tdd.models.User;
 
-import static org.junit.Assert.assertEquals;
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.test.JerseyTest;
+import org.glassfish.jersey.test.TestProperties;
+import org.junit.Test;
 
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.HttpHeaders;
@@ -8,24 +12,31 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.test.JerseyTest;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserEndpointTest extends JerseyTest {
     @Override
     protected Application configure() {
-        return new ResourceConfig(UserEndpoint.class);
+        enable(TestProperties.LOG_TRAFFIC);
+        enable(TestProperties.DUMP_ENTITY);
+        return new ResourceConfig(UserEndpoint.class, User.class);
     }
 
     @Test
     public void testUsers() {
-        Response response = target("users").request().get();
+        final Response response = target("users")
+            .path("123")
+            .request()
+            .get();
     
-        assertEquals("Http Response should be 200: ", Status.OK.getStatusCode(), response.getStatus());
-        assertEquals("Http Content-Type should be: ", MediaType.TEXT_HTML, response.getHeaderString(HttpHeaders.CONTENT_TYPE));
     
-        String content = response.readEntity(String.class);
-        assertEquals("Content of ressponse is: ", "ok", content);
+        assertEquals(response.getStatus(), Status.OK.getStatusCode());
+        assertEquals(response.getHeaderString(HttpHeaders.CONTENT_TYPE), MediaType.APPLICATION_JSON);
+    
+        User content = response.readEntity(User.class);
+
+        assertNotNull(content);
+        assertEquals(content.getId(), "123");
     }
 }
