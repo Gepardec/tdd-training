@@ -1,15 +1,48 @@
-# DB-Unit
+# Basics
+
+Integration testing (short: IT) is the phase where multiple components are combined and tested as a group. 
+When putting it in general order, it occurs before validation testing and after unit testing.
+
+There are different approaches for ITs
+
+**Big Bang**
+
+...is a version where most/all of the developed modules are coupled together and tested as a whole, which might save a lot of time if done right.
+
+**Bottom-up**
+
+...means that first the higher level components are tested, then the lower level ones and after that they undergo integration testing. This approach uses stubs to supplement the lower sub-modules during the testing of the higher level components.
+
+**Top-down**
+
+...is the opposite of Bottom-up. It means that first the lower level components are tested, then the higher level ones and finally they are integration tested. This method uses test drivers, mainly to pass the required data to the lower level modules.
+
+**Sandwich**
+
+...combines Top-down and Bottom-up.
+
+# Frameworks
+
+For integration testing there exist multiple frameworks, which can be used to speed up development processes and/or test a broader spec of your application instead of mocking it away (for example the database).
+
+## DB-Unit
 
 ```java
 // TODO
 ```
 
-# Jersey-Test
+## Warp-Unit
+
+```java
+// TODO
+```
+
+## Jersey-Test
 
 Jersey-Test is a framework made for testing rest services. 
 You can simply call an url like you would call it from Postman (or similar) and then assert the results.
 
-## Resources
+### Resources
 
 You can find the website of the Jersey framework [here](https://eclipse-ee4j.github.io/jersey/) and their docs about the testing framework [here](https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest/test-framework.html). 
 
@@ -20,8 +53,6 @@ If you want to find out more, here are some nice resources:
 
 - [Their own tests in their GitHub repository](https://github.com/eclipse-ee4j/jersey/tree/master/tests)
 - [An example of DI with Hk2 on GitHub](https://github.com/m4nu56/jersey-hk2)
-
-## About Jersey-Tests
 ### Configuration
 
 You need to import the relevant dependencies for your project:
