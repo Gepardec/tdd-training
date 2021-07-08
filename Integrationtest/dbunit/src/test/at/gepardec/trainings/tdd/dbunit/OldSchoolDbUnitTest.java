@@ -20,10 +20,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 
-import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.JDBC_DRIVER;
-import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.JDBC_URL;
-import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.PASSWORD;
-import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.USER;
+import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.*;
 import static org.dbunit.Assertion.assertEquals;
 import static org.hamcrest.MatcherAssert.assertThat;
 

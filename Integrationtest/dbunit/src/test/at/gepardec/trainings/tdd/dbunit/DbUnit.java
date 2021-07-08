@@ -1,16 +1,16 @@
 package at.gepardec.trainings.tdd.dbunit;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
-import java.io.FileInputStream;
-
 import org.dbunit.DBTestCase;
 import org.dbunit.PropertiesBasedJdbcDatabaseTester;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.operation.DatabaseOperation;
 import org.junit.Test;
+
+import java.io.FileInputStream;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 /***
  * TODO MF: needs to be finished for mysql
