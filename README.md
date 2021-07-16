@@ -1,7 +1,8 @@
 # TDD-Training
 
 ### The different Modules
-#### Einführun
+
+#### Einführung
 
 #### Integrationstest
 
@@ -9,7 +10,7 @@
 
 #### Arten von Tests
 
-
+jeweils 2 - 3 Sätze zu den einzelnen Punkten machen
 
 
 
