@@ -15,7 +15,6 @@ Ziel dieses Trainings ist, grundlegende Konzepte und das Verständnis für TDD z
 ## Übungen
 
 - Password-Example
-- 
 
 
 ## Nützliche Links
