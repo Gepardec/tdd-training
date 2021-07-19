@@ -10,7 +10,7 @@
 
 #### Arten von Tests
 
-jeweils 2 - 3 Sätze zu den einzelnen Punkten machen
+jeweils 2 - 3 Sätze zu den einzelnen Punkten machen was zu erwarten ist
 
 
 
