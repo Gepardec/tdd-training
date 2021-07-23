@@ -15,7 +15,7 @@ import static org.mockito.Mockito.verify;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.BDDMockito.given;
 
-public class BookbBusinessImplMockitoTest {
+public class BookBusinessImplMockitoTest {
 
     @Test
     public void usingMockito() {

@@ -2,21 +2,18 @@ package com.gepardec.tdd.workdir;
 
 import com.gepardec.tdd.BookBusinessImpl;
 import com.gepardec.tdd.BookService;
-import org.junit.Rule;
 import org.junit.Test;
-import org.mockito.*;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
-public class BookbBusinessImplMockInjectionTest {
+public class BookBusinessImplMockitoTest {
 
     @Test
     public void usingMockito() {

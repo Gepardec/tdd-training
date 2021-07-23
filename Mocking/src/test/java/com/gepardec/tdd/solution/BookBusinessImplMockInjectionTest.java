@@ -18,7 +18,7 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
 // @RunWith(MockitoJUnitRunner.class)
-public class BookbBusinessImplMockInjectionTest {
+public class BookBusinessImplMockInjectionTest {
 
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
