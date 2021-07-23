@@ -17,7 +17,7 @@ public class BookbBusinessImplMockitoTest {
 
     @Test
     public void usingMockito() {
-        List<String> allBookTitles = List.of("Clean Code",
+        List<String> allBookTitles = List.of("Pro ASP.NET Core 3: Develop Cloud-Ready Web Applications Using MVC, Blazor, and Razor Pages",
                 "Think Java: How to think like a computer scientist",
                 "Pro WPF in C# 2008",
                 "Java Performance: The Definitive Guide: Getting the Most Out of Your Code",
@@ -32,7 +32,7 @@ public class BookbBusinessImplMockitoTest {
 
     @Test
     public void usingMockito_WithBDD() {
-        List<String> allBookTitles = List.of("Clean Code",
+        List<String> allBookTitles = List.of("Pro ASP.NET Core 3: Develop Cloud-Ready Web Applications Using MVC, Blazor, and Razor Pages",
                 "Think Java: How to think like a computer scientist",
                 "Pro WPF in C# 2008",
                 "Java Performance: The Definitive Guide: Getting the Most Out of Your Code",
@@ -54,7 +54,7 @@ public class BookbBusinessImplMockitoTest {
     @Test
     public void delete_withVerify() {
 
-        List<String> allBookTitles = List.of("Clean Code",
+        List<String> allBookTitles = List.of("Pro ASP.NET Core 3: Develop Cloud-Ready Web Applications Using MVC, Blazor, and Razor Pages",
                 "Think Java: How to think like a computer scientist",
                 "Pro WPF in C# 2008",
                 "Java Performance: The Definitive Guide: Getting the Most Out of Your Code",
@@ -66,7 +66,7 @@ public class BookbBusinessImplMockitoTest {
 
         bookBusiness.deleteAllNoneJavaBooks("gepard");
 
-        verify(bookService).deleteBook("gepard", "Clean Code");
+        verify(bookService).deleteBook("gepard", "Learn Python the Hard Way");
 
         verify(bookService, Mockito.never()).deleteBook("gepard", "Think Java: How to think like a computer scientist");
 
@@ -77,7 +77,7 @@ public class BookbBusinessImplMockitoTest {
 
     @Test
     public void captureArgument() {
-        List<String> allBookTitles = List.of("Clean Code",
+        List<String> allBookTitles = List.of("Learn Python the Hard Way",
                 "Think Java: How to think like a computer scientist",
                 "Java Performance: The Definitive Guide: Getting the Most Out of Your Code");
 
@@ -91,6 +91,6 @@ public class BookbBusinessImplMockitoTest {
         bookBusiness.deleteAllNoneJavaBooks("gepard");
         Mockito.verify(bookService).deleteBook(eq("gepard"), argumentCaptor.capture());
 
-        assertEquals("Clean Code", argumentCaptor.getValue());
+        assertEquals("Learn Python the Hard Way", argumentCaptor.getValue());
     }
 }
