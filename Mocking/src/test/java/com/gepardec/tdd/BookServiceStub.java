@@ -11,4 +11,9 @@ public class BookServiceStub implements BookService {
                 "Java Performance: The Definitive Guide: Getting the Most Out of Your Code",
                 "Learn Python the Hard Way");
     }
+
+    @Override
+    public void deleteBook(String user, String bookName) {
+        // not necessary
+    }
 }

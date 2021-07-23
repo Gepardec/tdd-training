@@ -1,11 +1,13 @@
 package com.gepardec.tdd;
 
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.util.List;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.BDDMockito.given;
 
@@ -45,5 +47,30 @@ public class BookbBusinessImplMockitoTest {
 
         //then
         assertEquals(2, bookTitles.size());
+    }
+
+    @Test
+    public void letsTestDeleteNow() {
+
+        BookService bookService = mock(BookService.class);
+
+        List<String> allBookTitles = List.of("Clean Code",
+                "Think Java: How to think like a computer scientist",
+                "Pro WPF in C# 2008",
+                "Java Performance: The Definitive Guide: Getting the Most Out of Your Code",
+                "Learn Python the Hard Way");
+
+        when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
+        BookBusinessImpl bookBusiness = new BookBusinessImpl(bookService);
+
+        bookBusiness.deleteAllNoneJavaBooks("gepard");
+
+        verify(bookService).deleteBook("gepard", "Clean Code");
+
+        verify(bookService, Mockito.never()).deleteBook("gepard", "Think Java: How to think like a computer scientist");
+
+        verify(bookService, Mockito.times(1)).deleteBook("gepard", "Pro WPF in C# 2008");
+
+        // FIXME GAJ: atLeastOnce, atLeast ?!?!
     }
 }
