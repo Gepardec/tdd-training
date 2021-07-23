@@ -1,10 +1,20 @@
 # TDD-Training
-Code samples for practicing TDD and testing in general
+
+### The different Modules
+
+#### Einführung
+
+#### Integrationstest
+
+#### Mocking
+
+#### Arten von Tests
+
+jeweils 2 - 3 Sätze zu den einzelnen Punkten machen was zu erwarten ist
 
 
-TODO:
 
-Roadmap/Handbuch/Readme.extended
+
 Resourcen angeben
 Bücher (Wien/Linz)
 
