@@ -80,7 +80,7 @@ public class BookbBusinessImplMockInjectionTest {
 
         verify(bookService, Mockito.times(1)).deleteBook("gepard", "Pro WPF in C# 2008");
 
-        // FIXME GAJ: atLeastOnce, atLeast ?!?!
+        // more useful tools: Mockito.atLeastOnce, Mockito.atLeast
     }
 
     @Test
