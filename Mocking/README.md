@@ -1,5 +1,7 @@
 # Mocking
 
+## A little bit of theory
+
 **What is mocking?**
  * Mocking is used in (unit-)testing
  * To mock: to replace with an imitation
@@ -31,11 +33,26 @@
  * Create Mock class
  * Whole class can be mocked since classloader is told to remap to mock class(also private, static, final things)
 
-**Sample Project:**
- * [Good course that also inspired this tutorial a lot](https://github.com/in28minutes/MockitoTutorialForBeginners)
- 
 **Notes:**
  * Mocking in integration-testing should be used on service you have no control over
+
+## Mockito basics step-by-step
+
+**TBD**
+
+Relevant classes: 
+ * [BookBusinessImpl](src\main\java\com\gepardec\tdd\BookBusinessImpl.java)
+ * [BookService](src\test\java\com\gepardec\tdd\workdir\BookService.java)
+ * [BookServiceStub](src\test\java\com\gepardec\tdd\workdir\BookServiceStub.java)
+ * [BookBusinessImplStubTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplStubTest.java)
+ * [BookBusinessImplMockitoTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplMockitoTest.java)
+ * [BookBusinessImplMockInjectionTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplMockInjectionTest.java)
+
+ 
+## References
+
+**Sample Project:**
+ * [Good course that also inspired this tutorial A LOT](https://github.com/in28minutes/MockitoTutorialForBeginners)
 
 **Further references:**
  * [Mocking in a microservice architecture](https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/)
