@@ -14,7 +14,7 @@
 **Drawbacks of mocking:**
  * Mocks have to evolve with the real functionality (e.g. mocks have to be changed after bugfix) - a lot of refactoring 
  * Mocking often leads to code duplication
- * Mocken can complicate the design of the software (not as much thought has to be put into code design since dependencies do not matter when mocking excessively)
+ * Mocking can complicate the design of the software (not as much thought has to be put into code design since dependencies do not matter when mocking excessively)
 
 **Mocking-Types:**
  * Stubbing – simulate (only mock behavior – e.g. replace DB with some kind of in-memory-structure)
