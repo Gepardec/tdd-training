@@ -38,4 +38,4 @@
  * Mocking in integration-testing should be used on service you have no control over
 
 **Further references:**
- * [mocking in a microservice architecture](https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/)
+ * [Mocking in a microservice architecture](https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/)
