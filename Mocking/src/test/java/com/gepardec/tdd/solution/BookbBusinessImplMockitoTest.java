@@ -1,5 +1,7 @@
-package com.gepardec.tdd;
+package com.gepardec.tdd.solution;
 
+import com.gepardec.tdd.BookBusinessImpl;
+import com.gepardec.tdd.BookService;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;

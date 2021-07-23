@@ -1,4 +1,6 @@
-package com.gepardec.tdd;
+package com.gepardec.tdd.solution;
+
+import com.gepardec.tdd.BookService;
 
 import java.util.List;
 

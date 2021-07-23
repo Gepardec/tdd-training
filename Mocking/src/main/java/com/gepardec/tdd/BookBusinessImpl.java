@@ -9,7 +9,7 @@ public class BookBusinessImpl {
 
     private final BookService bookService;
 
-    BookBusinessImpl(BookService bookService) {
+    public BookBusinessImpl(BookService bookService) {
         this.bookService = bookService;
     }
 
