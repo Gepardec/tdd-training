@@ -32,10 +32,10 @@
  * Whole class can be mocked since classloader is told to remap to mock class(also private, static, final things)
 
 **Sample Project:**
- * https://github.com/in28minutes/MockitoTutorialForBeginners
+ * [Good course that also inspired this tutorial a lot](https://github.com/in28minutes/MockitoTutorialForBeginners)
  
 **Notes:**
  * Mocking in integration-testing should be used on service you have no control over
 
 **Further references:**
- * mocking in a microservice architecture (https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/)
+ * [mocking in a microservice architecture](https://circleci.com/blog/how-to-test-software-part-i-mocking-stubbing-and-contract-testing/)
