@@ -1,10 +1,12 @@
 package com.gepardec.tdd;
 
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
 import java.util.List;
 
+import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
@@ -50,9 +52,7 @@ public class BookbBusinessImplMockitoTest {
     }
 
     @Test
-    public void letsTestDeleteNow() {
-
-        BookService bookService = mock(BookService.class);
+    public void delete_withVerify() {
 
         List<String> allBookTitles = List.of("Clean Code",
                 "Think Java: How to think like a computer scientist",
@@ -60,6 +60,7 @@ public class BookbBusinessImplMockitoTest {
                 "Java Performance: The Definitive Guide: Getting the Most Out of Your Code",
                 "Learn Python the Hard Way");
 
+        BookService bookService = mock(BookService.class);
         when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
         BookBusinessImpl bookBusiness = new BookBusinessImpl(bookService);
 
@@ -72,5 +73,24 @@ public class BookbBusinessImplMockitoTest {
         verify(bookService, Mockito.times(1)).deleteBook("gepard", "Pro WPF in C# 2008");
 
         // FIXME GAJ: atLeastOnce, atLeast ?!?!
+    }
+
+    @Test
+    public void captureArgument() {
+        List<String> allBookTitles = List.of("Clean Code",
+                "Think Java: How to think like a computer scientist",
+                "Java Performance: The Definitive Guide: Getting the Most Out of Your Code");
+
+        ArgumentCaptor<String> argumentCaptor = ArgumentCaptor
+                .forClass(String.class);
+
+        BookService bookService = mock(BookService.class);
+        Mockito.when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
+        BookBusinessImpl bookBusiness = new BookBusinessImpl(bookService);
+
+        bookBusiness.deleteAllNoneJavaBooks("gepard");
+        Mockito.verify(bookService).deleteBook(eq("gepard"), argumentCaptor.capture());
+
+        assertEquals("Clean Code", argumentCaptor.getValue());
     }
 }
