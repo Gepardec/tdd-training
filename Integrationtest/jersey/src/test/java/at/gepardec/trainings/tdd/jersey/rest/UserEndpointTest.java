@@ -15,109 +15,105 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/** 
+ * Get the following tests to run, without changing the code of {@link UserEndpoint}
+ */
 public class UserEndpointTest extends JerseyTest {
+
     @Override
     protected Application configure() {
         enable(TestProperties.LOG_TRAFFIC);
         enable(TestProperties.DUMP_ENTITY);
-        return new ResourceConfig(UserEndpoint.class);
+        return new ResourceConfig(); //TODO: fill the ResourceConfig
     }
 
+    
+    /** 
+     * When calling {@link UserEndpoint#getUser()} with an ID, 
+     * the method should return a User with the given ID
+     */
     @Test
     public void getUser_works() {
-        final Response response = target("users")
-            .path("1")
-            .request()
-            .get();
-    
+        final Response response = null; //TODO: write the request
+        final User content = response.readEntity(User.class);
     
         assertEquals(Status.OK.getStatusCode(), response.getStatus());
         assertEquals(MediaType.APPLICATION_JSON, response.getHeaderString(HttpHeaders.CONTENT_TYPE));
-    
-        User content = response.readEntity(User.class);
-
         assertNotNull(content);
         assertEquals(1L, content.getId());
     }
 
+    /** 
+     * When calling {@link UserEndpoint#getUser()} with an invalid non-number ID, 
+     * the method should return a Response of BAD_REQUEST
+     */
     @Test
     public void getUser_badRequest() {
-        final Response response = target("users")
-            .path("someString")
-            .request()
-            .get();
-    
+        final Response response = null; //TODO: write the request
+        final User content = response.readEntity(User.class);
     
         assertEquals(Status.BAD_REQUEST.getStatusCode(), response.getStatus());
-    
-        User content = response.readEntity(User.class);
-
         assertNull(content);
     }
 
+    /** 
+     * When calling {@link UserEndpoint#getUser()} with an unlucky ID of 13,
+     * the method should return a Response of NOT_FOUND
+     */
     @Test
     public void getUser_notFound() {
-        final Response response = target("users")
-            .path("13")
-            .request()
-            .get();
+        final Response response = null; //TODO: write the request
+        final User content = response.readEntity(User.class);
     
         assertEquals(Status.NOT_FOUND.getStatusCode(), response.getStatus());
-    
-        User content = response.readEntity(User.class);
-
         assertNull(content);
     }
 
+    /** 
+     * When calling {@link UserEndpoint#putUser()} with a valid user,
+     * the method should return a Response with the user plus an ID
+     */
     @Test
     public void putUser() {
-        var usr = new User("Test");
-        var entity = Entity.entity(usr, MediaType.APPLICATION_JSON);
-
-        final Response response = target("users")
-            .request()
-            .put(entity);
+        final Response response = null; //TODO: write the request + entity
+        final User content = response.readEntity(User.class);
     
         assertEquals(Status.OK.getStatusCode(), response.getStatus());
-    
-        User content = response.readEntity(User.class);
-
         assertNotNull(content);
         assertNotNull(content.getId());
         assertEquals("Test", content.getUsername());
     }
 
+    /** 
+     * When calling {@link UserEndpoint#putUser()} with an invalid user,
+     * the method should return a Response of BAD_REQUEST
+     */
     @Test
     public void putUser_badRequest() {
-        var usr = new User();
-        var entity = Entity.entity(usr, MediaType.APPLICATION_JSON);
-
-        final Response response = target("users")
-            .request()
-            .put(entity);
-    
+        final Response response = null; //TODO: write the request + entity
         assertEquals(Status.BAD_REQUEST.getStatusCode(), response.getStatus());
     }
 
+    /** 
+     * When calling {@link UserEndpoint#deleteUser()} with a valid ID,
+     * the method should return a Response containing true
+     */
     @Test
     public void deleteUser() {
-        final Response response = target("users/1")
-            .request()
-            .method("DELETE");
+        final Response response = null; //TODO: write the request + entity
+        boolean content = response.readEntity(Boolean.class);
     
         assertEquals(Status.OK.getStatusCode(), response.getStatus());
-
-        boolean content = response.readEntity(Boolean.class);
-
         assertTrue(content);
     }
 
     /**
-     * Sadly PATCH doesnt work with Jersey.<br/><br/>
+     * Sadly PATCH doesn't work with Jersey.<br/><br/>
      * 
      * To try out that the request actually works, deploy it and fire the following HTTP Request:
      * 
@@ -132,14 +128,9 @@ public class UserEndpointTest extends JerseyTest {
      */
     @Test
     public void patchUser_fail() {
-        var usr = new User("Test");
-        var entity = Entity.entity(usr, MediaType.APPLICATION_JSON);
-
         try {
-            target("users")
-                .path("1")
-                .request()
-                .method("PATCH", entity);
+            ; //TODO: write the request + entity
+            fail("Request succeeded");
         } catch(ProcessingException e) {
             assertEquals("java.net.ProtocolException: Invalid HTTP method: PATCH", e.getMessage());
         }

@@ -27,12 +27,10 @@ public class Cdi2DepInjectionEndpointTest extends JerseyTest {
     @Test
     public void testDi() {
         Response response = target("di").request().get();
+        String content = response.readEntity(String.class);
     
         assertEquals(Status.OK.getStatusCode(), response.getStatus());
         assertEquals(MediaType.TEXT_HTML, response.getHeaderString(HttpHeaders.CONTENT_TYPE));
-    
-        String content = response.readEntity(String.class);
-
         assertEquals("Factory: Dependency Injection", content);
     }
 }

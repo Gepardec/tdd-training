@@ -75,3 +75,7 @@ In case you want to use Dependency Injection in your application, you have two O
 ### Setup & Deployment
 
 Read the [SETUP.md](jersey/SETUP.md) inside the jersey maven module.
+
+### Exercise
+
+Go to the [UserEndpointTest](jersey/src/test/java/at/gepardec/trainings/tdd/jersey/rest/UserEndpointTest.java) and follow the instructions in the comments.

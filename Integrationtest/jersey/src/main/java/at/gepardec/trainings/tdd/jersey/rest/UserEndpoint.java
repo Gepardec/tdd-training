@@ -65,7 +65,7 @@ public class UserEndpoint {
     @Path("{userId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response patchUser(@PathParam("userId") Long id) {
+    public Response deleteUse(@PathParam("userId") Long id) {
         return Response
             .ok(true)
             .build();

@@ -24,12 +24,10 @@ public class PingEndpointTest extends JerseyTest {
     @Test
     public void testPing() {
         Response response = target("ping").request().get();
+        String content = response.readEntity(String.class);
     
         assertEquals(Status.OK.getStatusCode(), response.getStatus());
         assertEquals(MediaType.TEXT_HTML, response.getHeaderString(HttpHeaders.CONTENT_TYPE));
-    
-        String content = response.readEntity(String.class);
-
         assertEquals("pong", content);
     }
 }
