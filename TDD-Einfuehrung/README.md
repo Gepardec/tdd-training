@@ -11,6 +11,9 @@ Einführung 3-4 Sätze worum es geht bei TDD
 1/2 A4Seite - Konzept
 Auflistung von Tipps, Erfahrungen - Best Practices
 
+
+Test->code->test->codefix->test->test->nextcode->test usw.
+
 ## Übungen
 
 Die Übungen sind jeweils auf 2 Ordner aufgeteilt. Einer mit dem Übungsmaterial und einmal mit dem Lösungsmaterial.
