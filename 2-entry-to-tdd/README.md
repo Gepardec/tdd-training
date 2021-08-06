@@ -1,12 +1,56 @@
 # Basics
 
-Test-Driven-Development (short: TDD)
+Test-Driven-Development (short: TDD) is a software development approach in which tests are written to specify what the code will do in the future.
 
-## What is TDD?
+In other words, you write your specifications for each feature is written first and if the test fails, new code is written in order to pass the test. 
+After that you will optionally do some refactoring to clean up the written code.
 
-### How-to
+TDD instructs developers to write new code only if an automated test has failed first.
+
+```
+┌────────────┐     ┌────────────┐
+│            │     │            │
+│ Write Test ├────►│ Write Code │
+│            │     │            │
+└────────────┘     └──────┬─────┘
+     ▲                    │
+     │    ┌──────────┐    │
+     │    │          │    │
+     └────┤ Refactor │◄───┘
+          │          │
+          └──────────┘
+```
+
+### Acceptance TDD and Developer TDD
+
+1. Acceptance TDD (ATDD)
+    * With ATDD you write a single test, that fulfills the requirement of the specification or satisfies the behavior of the system
+    * ATDD is also known as Behavioral Driven Development (BDD)
+2. Developer TDD (Simply TDD)
+    * Here you write a single Unit Test and then just enough code to fulfill that test
 
 ### Best Practices & Tips
+
+Follow those rules:
+
+ - Write the test before writing the implementation
+ - Write new code only when the test is failing
+ - Rerun all tests every time the implementation changes
+ - Pass all tests before writing a new one
+ - Refactor only after passing all tests
+
+Best Practices:
+
+ - Use descriptive names for test methods
+ - Place the tests in the same package as the implementation
+ - Name test classes in a similar way as the implementation (e.g. `ClassName` -> `ClassNameTest`)
+ - Write the simplest code to pass the test
+ - Write assertions first
+ - Do not introduce dependencies between tests
+ - Tests must run fast
+ - Use mocks (more on that in another module of this training)
+
+For a more detailed description [look here](https://scand.com/company/blog/test-driven-development-best-practices/).
 
 ## Exercise
 
