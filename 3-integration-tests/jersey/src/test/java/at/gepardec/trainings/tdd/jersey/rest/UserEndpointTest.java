@@ -23,6 +23,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /** 
  * Get the following tests to run, without changing the code of {@link UserEndpoint}
  */
+
+@SuppressWarnings({"all"})
 public class UserEndpointTest extends JerseyTest {
 
     @Override
