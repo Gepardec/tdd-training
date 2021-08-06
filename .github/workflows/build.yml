@@ -10,11 +10,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Build DBUnit
-        run: cd 3-integration-tests/dbunit && mvn verify -DskipTests
-      - name: Build Jersey
-        run: cd 3-integration-tests/jersey && mvn verify -DskipTests
-      - name: Build WarpUnit
-        run: cd 3-integration-tests/ && echo "TBD"
-      - name: Build password-example
-        run: cd 2-entry-to-tdd/password-example && mvn verify -DskipTests
+      # skip tests because they should fail or do not exist
+      - name: Build integration-tests-example
+        run: cd 3-integration-tests && mvn verify -DskipTests
+      - name: Build tdd-example
+        run: cd 2-entry-to-tdd && mvn verify -DskipTests
