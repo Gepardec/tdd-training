@@ -1,23 +1,16 @@
-# TDD-Training
+# Testing Training
 
-### The different Modules
+This repository is built into 4 different modules that you can work through however your want.
+If you completely make your way through it, you will gain knowledge about testing in general and different frameworks that are commonly used in combination with tests.
 
-#### Einführung
+The modules are generally based on Java 11 (download [here](https://developers.redhat.com/products/openjdk/download)) and Maven 3.6.3 (download [here](https://archive.apache.org/dist/maven/maven-3/))
 
-#### Integrationstest
+## Different types of tests -> [link](1-types-of-tests)
 
-#### Mocking
+## Entry to Test-Driven-Development (TDD) -> [link](2-entry-to-tdd)
 
-#### Arten von Tests
+## Integration tests -> [link](3-integration-tests)
 
-jeweils 2 - 3 Sätze zu den einzelnen Punkten machen was zu erwarten ist
+## Mocking -> [link](4-mocking)
 
-
-
-
-Resourcen angeben
-Bücher (Wien/Linz)
-
-Glossar
-
-Nützliche Links
+# Useful Links
