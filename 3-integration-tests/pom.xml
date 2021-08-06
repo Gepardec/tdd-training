@@ -7,6 +7,12 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>at.gepardec.trainings</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
     <modules>
         <module>dbunit</module>
         <module>jersey</module>

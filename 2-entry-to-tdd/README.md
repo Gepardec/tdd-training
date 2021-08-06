@@ -93,8 +93,8 @@ If the password is not correct I want to see an output in the console that it is
 
 --- 
 
-To start your journy, go to this file: [OutputFormatterTest.java](password-example/uebung/src/test/java/output/OutputFormatterTest.java), 
-or this file: [PasswordValidatorTest.java](password-example/uebung/src/test/java/validator/PasswordValidatorTest.java)
+To start your journy, go to this file: [OutputFormatterTest.java](exercise/src/test/java/output/OutputFormatterTest.java), 
+or this file: [PasswordValidatorTest.java](exercise/src/test/java/validator/PasswordValidatorTest.java)
 and start writing your tests. after you are done writing them, edit the source code to make the tests green.
 
 ## Resources
