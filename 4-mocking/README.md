@@ -38,33 +38,33 @@
 
 ## Mockito basics step-by-step
 
-In this example project [BookBusinessImpl](src\main\java\com\gepardec\tdd\BookBusinessImpl.java) is the class to be tested.
-It performs operations on book-titles that are retrieved through the [BookService-Interface](src\test\java\com\gepardec\tdd\workdir\BookService.java)
+In this example project [BookBusinessImpl](src/main/java/com/gepardec/tdd/BookBusinessImpl.java) is the class to be tested.
+It performs operations on book-titles that are retrieved through the [BookService-Interface](src/test/java/com/gepardec/tdd/workdir/BookService.java)
 which represents something we do not have control over like an external service.
 
-In the [workdir package](src\test\java\com\gepardec\tdd\workdir) you already find all classes that you will need for completion of this exercise.
+In the [workdir package](src/test/java/com/gepardec/tdd/workdir) you already find all classes that you will need for completion of this exercise.
 
 **Step 1: Stubbing**
 
-Implement the already in [BookBusinessImplStubTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplStubTest.java) present test, which should test
-`BookBusinessImpl.retrieveAllJavaBookTitles(...)` by using [BookServiceStub](src\test\java\com\gepardec\tdd\workdir\BookServiceStub.java) to control the data returned by the external service.
+Implement the already in [BookBusinessImplStubTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplStubTest.java) present test, which should test
+`BookBusinessImpl.retrieveAllJavaBookTitles(...)` by using [BookServiceStub](src/test/java/com/gepardec/tdd/workdir/BookServiceStub.java) to control the data returned by the external service.
 
 **Step 2: Mockito**
 
-Now we tackle actually mocking the behaviour of our external service by using Mockito. To create the mock-object we use Mockitos `mock(...)` method.
-Once the object has been created we also have to specify the behaviour of it. To do so, your code should look something like:
+Now we tackle actually mocking the behavior of our external service by using Mockito. To create the mock-object we use Mockitos `mock(...)` method.
+Once the object has been created we also have to specify the behavior of it. To do so, your code should look something like:
 
 ```java
 Service service = mock(Service.class);
 when(service.call()).thenReturn(data);
 ```
 
-Again implement a test(this time in [BookBusinessImplMockitoTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplMockitoTest.java))
+Again implement a test (this time in [BookBusinessImplMockitoTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplMockitoTest.java))
 on `BookBusinessImpl.retrieveAllJavaBookTitles(...)` this time by mocking the external service.
 
 **Step 2: BDD**
 
-A popular testing practice that is closely related to TDD is Behaviour Driven Development or
+A popular testing practice that is closely related to TDD is Behavior Driven Development or
 [BDD](https://www.tricentis.com/blog/bdd-behavior-driven-development/). It's key characteristic is a very descriptive way to write tests that can also
 act as a documentation of your code. It uses a Given-When-Then-Structure when writing tests, for example:
 
@@ -95,7 +95,7 @@ parameters a method has been called.
 verify(service, Mockito.times(n)).call(params);
 ```
 
-Now write a test, again in [BookBusinessImplMockitoTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplMockitoTest.java), that mocks the 
+Now write a test, again in [BookBusinessImplMockitoTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplMockitoTest.java), that mocks the 
 external service and verifies the behaviour of `BookService.deleteBook(...).`
 
 **Step 4: Capture argument**
@@ -142,14 +142,14 @@ For this exercise you will only need:
 public MockitoRule mockitoRule = MockitoJUnit.rule();
 ```
 
-Try recreating all methods of [BookBusinessImplMockitoTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplMockitoTest.java)
-in [BookBusinessImplMockInjectionTest](src\test\java\com\gepardec\tdd\workdir\BookBusinessImplMockInjectionTest.java) by using only injected mocks.
+Try recreating all methods of [BookBusinessImplMockitoTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplMockitoTest.java)
+in [BookBusinessImplMockInjectionTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplMockInjectionTest.java) by using only injected mocks.
 
 **Step 6: Review**
 
 All done :)
 
-Solutions to this exercise can be found [here](src\test\java\com\gepardec\tdd\solution) and there are some further features highlighted [here](src\test\java\com\gepardec\tdd\additional)
+Solutions to this exercise can be found [here](src/test/java/com/gepardec/tdd/solution) and there are some further features highlighted [here](src/test/java/com/gepardec/tdd/additional)
  
 ## Further references
 

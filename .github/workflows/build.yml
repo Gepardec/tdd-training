@@ -11,7 +11,9 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       # skip tests because they should fail or do not exist
-      - name: Build integration-tests-example
-        run: cd 3-integration-tests && mvn verify -DskipTests
       - name: Build tdd-example
         run: cd 2-entry-to-tdd && mvn verify -DskipTests
+      - name: Build integration-tests-example
+        run: cd 3-integration-tests && mvn verify -DskipTests
+      - name: Build mocking-example
+        run: cd 4-mocking && mvn verify -DskipTests
