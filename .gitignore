@@ -1,12 +1,11 @@
-/.idea/
-*.iml
-/TDD-Einfuehrung/password-example/loesung/target/
-/TDD-Einfuehrung/password-example/uebung/target/
-
-target
+**/target
 
 # vs code generated
-.classpath
-.project
-.settings
-.vscode
+**/.classpath
+**/.project
+**/.settings
+**/.vscode
+
+# intelliJ generated
+**/.idea
+**/*.iml
