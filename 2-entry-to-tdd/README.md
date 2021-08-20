@@ -62,7 +62,7 @@ The exercise is the following:
 ---
 [ENG]
 ```
-The following is a conversation with a customer. Focus on the requirements.
+The following is a conversation with a customer. Focus on the requirements and implement these step by step with the Test-Driven approach.
 
  >> I would like to be able to enter a password into the console and then be informed
 whether the password complies with the guidelines.
@@ -77,7 +77,7 @@ If the password is not correct I want to see an output in the console that it is
   <summary>[GER] - Hier klicken, wenn eine Deutsche Übersetzung benötigt wird</summary>
 
   ```
-  Das folgende ist ein Gespräch mit einem Kunden. Konzentriere dich auf die gestellten Anforderungen.
+  Das folgende ist ein Gespräch mit einem Kunden. Konzentriere dich auf die gestellten Anforderungen und implementiere diese Schritt für Schritt mit dem Test-Driven Ansatz.
 
    >> Ich möchte ein Passwort in die Konsole eingeben können und danach informiert werden, 
   ob das Passwort auch den Richtlinien entspricht.
