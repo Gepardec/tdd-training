@@ -1,5 +1,13 @@
 package at.gepardec.trainings.tdd.dbunit;
 
+import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.*;
+import static org.dbunit.Assertion.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+
 import org.dbunit.Assertion;
 import org.dbunit.IDatabaseTester;
 import org.dbunit.JdbcDatabaseTester;
@@ -15,14 +23,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.ResultSet;
-
-import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.*;
-import static org.dbunit.Assertion.assertEquals;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(JUnit4.class)
 public class OldSchoolDbUnitTest {

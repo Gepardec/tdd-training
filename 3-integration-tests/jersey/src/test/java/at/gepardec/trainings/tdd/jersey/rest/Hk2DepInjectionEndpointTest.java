@@ -1,10 +1,6 @@
 package at.gepardec.trainings.tdd.jersey.rest;
 
-import org.glassfish.hk2.utilities.binding.AbstractBinder;
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.test.JerseyTest;
-import org.glassfish.jersey.test.TestProperties;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.HttpHeaders;
@@ -12,9 +8,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import at.gepardec.trainings.tdd.jersey.factories.StringFactory;
+import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.test.JerseyTest;
+import org.glassfish.jersey.test.TestProperties;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import at.gepardec.trainings.tdd.jersey.factories.StringFactory;
 
 public class Hk2DepInjectionEndpointTest extends JerseyTest {
     private static class Binder extends AbstractBinder {

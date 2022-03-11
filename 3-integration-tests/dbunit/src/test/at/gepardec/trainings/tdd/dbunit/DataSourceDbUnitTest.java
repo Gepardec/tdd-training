@@ -1,5 +1,17 @@
 package at.gepardec.trainings.tdd.dbunit;
 
+import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.*;
+import static java.util.stream.Collectors.joining;
+import static org.dbunit.Assertion.assertEqualsIgnoreCols;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
 import org.dbunit.Assertion;
 import org.dbunit.DataSourceBasedDBTestCase;
 import org.dbunit.assertion.DiffCollectingFailureHandler;
@@ -17,17 +29,6 @@ import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-
-import javax.sql.DataSource;
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import static at.gepardec.trainings.tdd.dbunit.ConnectionSettings.*;
-import static java.util.stream.Collectors.joining;
-import static org.dbunit.Assertion.assertEqualsIgnoreCols;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * DB unit example

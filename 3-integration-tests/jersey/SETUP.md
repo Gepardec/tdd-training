@@ -1,4 +1,6 @@
-# Setup
+# Setup & Deployment
+
+## Setup
 
 You need to import the relevant dependencies for your project:
 
@@ -48,7 +50,7 @@ In case your Project is running on `javaee-api` 8+, you can also use the followi
 </dependency>
 ```
 
-# Deployment
+## Deployment
 
 In case you want do deploy the project to a Wildfly server, you can use the following command:
 
@@ -63,7 +65,7 @@ docker container run -itd \
     && docker container cp $(pwd)/target/it.war wildfly:/opt/jboss/wildfly/standalone/deployments/it.war
 ```
 
-You can then open your browser to visit the exposed paths from the url http://localhost:8080/it/rest. E.g. http://localhost:8080/it/rest/ping
+You can then open your browser to visit the exposed paths from the url <http://localhost:8080/it/rest>. E.g. <http://localhost:8080/it/rest/ping>
 
 To trigger a rebuild and redeploy, run the following command:
 
