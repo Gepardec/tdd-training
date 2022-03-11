@@ -39,10 +39,10 @@ While testing there sometimes are areas of your class that you want to leave out
 
 In this module, you will learn to handle one of the most well-known testing libraries overall called "Mockito" and write some sample tests with it.
 
-# Useful Links
+## Useful Links
 
 <!-- prettier-ignore -->
 Name | Link | Description
 ---- | ---- | ----
-JavaPoint | https://www.javatpoint.com/software-testing-tutorial | is a great resource for general information about testing (look at the menu on the left to choose a topic you are interested in)
-GitHub | https://github.com  | a good idea if you need some help with some framework, is to search for it on GitHub - there are tons of user-created tutorials and trainings and most of the time the official repository (or at least a clone of it) is hosted there too
+JavaPoint | <https://www.javatpoint.com/software-testing-tutorial> | is a great resource for general information about testing (look at the menu on the left to choose a topic you are interested in)
+GitHub | <https://github.com>  | a good idea if you need some help with some framework, is to search for it on GitHub - there are tons of user-created tutorials and trainings and most of the time the official repository (or at least a clone of it) is hosted there too
