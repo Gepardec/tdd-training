@@ -15,7 +15,7 @@ Topics that will be covered are among others the following:
 - Load testing
 - ...
 
-## Entry to Test-Driven-Development (TDD) -> [link](2-entry-to-tdd)
+## Intro to Test-Driven-Development (TDD) -> [link](2-intro-to-tdd)
 
 In this module you will get a glance upon a popular software development approach, which is known by the abbreviated name TDD.
 

@@ -50,7 +50,7 @@ public class PasswordValidatorTest {
     }
 
     @Test
-    public void test_isValid_withtLetter(){
+    public void test_isValid_withLetter(){
         assertTrue(validator.isValid("Abc123!"));
     }
 
