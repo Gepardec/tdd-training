@@ -12,7 +12,7 @@ jobs:
           distribution: 'adopt'
       # skip tests because they should fail or do not exist
       - name: Build tdd-example
-        run: cd 2-entry-to-tdd && mvn verify -DskipTests
+        run: cd 2-intro-to-tdd && mvn verify -DskipTests
       - name: Build integration-tests-example
         run: cd 3-integration-tests && mvn verify -DskipTests
       - name: Build mocking-example
