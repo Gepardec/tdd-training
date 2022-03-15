@@ -6,7 +6,7 @@ public class PasswordValidator {
 
     private Pattern letter = Pattern.compile("[a-zA-z]");
     private Pattern digit = Pattern.compile("[0-9]");
-    private Pattern special = Pattern.compile ("[\\W]");
+    private Pattern special = Pattern.compile ("[^a-zA-Z0-9 ]");
     private Pattern whiteSpace = Pattern.compile("[\\s]");
 
     public boolean isValid(String password) {
