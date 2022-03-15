@@ -2,7 +2,7 @@
 
 Test-Driven-Development (short: TDD) is a software development approach in which tests are written to specify what the code will do in the future.
 
-In other words, you write your specifications for each feature is written first and if the test fails, new code is written in order to pass the test.
+In other words, you write your specifications for each feature first and if the test fails, new code is written in order to pass the test.
 After that you will optionally do some refactoring to clean up the written code.
 
 TDD instructs developers to write new code only if an automated test has failed first.
@@ -55,7 +55,8 @@ For a more detailed description [look here](https://scand.com/company/blog/test-
 ## Exercise
 
 The exercises are split up into two folders, one containing the exercise material and one containing the solutions.
-When you don't know any further, ask a trainer, or as a last resort, look into the solutions folder.
+When you don't know any further, ask a trainer, or, as a last resort, look into the solutions folder.
+If you believe you have covered all requirements and all tests succeed, compare your test file with the examples in the solutions folder.
 
 The exercise is the following:
 

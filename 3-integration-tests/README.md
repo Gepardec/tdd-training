@@ -11,12 +11,12 @@ There are different approaches for ITs
 ...is a version where most/all of the developed modules are coupled together and tested as a whole, which might save a lot of time if done right.
 
 **Bottom-up**
-...means that first the higher level components are tested, then the lower level ones and after that they undergo integration testing. This approach uses stubs to supplement the lower sub-modules during the testing of the higher level components.
+...means that first the lower level components are tested, then the higher level ones and finally they are integration tested. This approach uses stubs to supplement the lower sub-modules during the testing of the higher level components.
 
 **Top-down**
-...is the opposite of Bottom-up. It means that first the lower level components are tested, then the higher level ones and finally they are integration tested. This method uses test drivers, mainly to pass the required data to the lower level modules.
+...is the opposite of Bottom-up. It means that first the higher level components are tested, then the lower level ones and after that they undergo integration testing. This method uses test drivers, mainly to pass the required data to the lower level modules.
 
-**Sandwich**
+**Sandwich or Hybrid**
 ...combines Top-down and Bottom-up.
 
 ## Frameworks

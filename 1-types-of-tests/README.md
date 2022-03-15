@@ -53,11 +53,11 @@ Integrationstests werden dann eingesetzt, wenn das reibungslose Zusammen­spiel 
 
 ### Strategien für Integrationstests
 
-Auch gibt es mehrere Strategien bei der Umsetzung der Integrationstests, wie z.B. Top-Down und Bottom-Up Vorgehensweise. Nachfolgend finden Sie einen kurzen Überblick:
+Auch gibt es mehrere Strategien bei der Umsetzung der Integrationstests, wie z.B. Top-Down und Bottom-Up Vorgehensweise. Nachfolgend findest du einen kurzen Überblick:
 
 #### 1. Top-Down-Testing
 
-Bei diesem Ansatz fängt man mit der Integration der Module auf den oberen Stufen, die hochgranulare Geschäftsmodule abbilden, und erweitert diese Tests Schritt für Schritt bis hin zu Modulen auf niedrigsten Stufen, die feingranulare Aspekte einer Applikation implementieren. Solange die Module auf untersten Ebenen nicht existieren, können Sie durch die Verwendung von “Stubs” simu­liert werden.
+Bei diesem Ansatz fängt man mit der Integration der Module auf den oberen Stufen, die hochgranulare Geschäftsmodule abbilden, an und erweitert diese Tests Schritt für Schritt bis hin zu Modulen auf den niedrigsten Stufen, die feingranulare Aspekte einer Applikation implementieren. Solange die Module auf untersten Ebenen nicht existieren, können Sie durch die Verwendung von “Stubs” simu­liert werden.
 
 ![Top Down](./top_down.png)
 
@@ -75,7 +75,7 @@ Nachteile
 
 #### 2. Bottom-Up-Testing
 
-Bei diesem Ansatz werden zuerst die Module aus den niedrigsten Stufen bis hin zu den obersten Stufen getestet werden. Diese Methode ist empfehlenswert, wenn als Erstes sichergestellt werden sollte, dass die Basismodule möglichst reibungslos untereinander funktionieren. Die Ansteuerungslogik im Test ersetzt dabei die eventuell noch nicht fertiggestellte Geschäftslogik auf den höheren Stufen, weshalb der Testfall dann als ”Driver” für Module auf unteren Stufen fungiert.
+Bei diesem Ansatz werden zuerst die Module aus den niedrigsten Stufen bis hin zu den obersten Stufen getestet. Diese Methode ist empfehlenswert, wenn als Erstes sichergestellt werden sollte, dass die Basismodule möglichst reibungslos untereinander funktionieren. Die Ansteuerungslogik im Test ersetzt dabei die eventuell noch nicht fertiggestellte Geschäftslogik auf den höheren Stufen, weshalb der Testfall dann als ”Driver” für Module auf unteren Stufen fungiert.
 
 ![Bottom Up](./bottom_up.png)
 
@@ -93,7 +93,7 @@ Nachteile
 
 #### 3. Hybrid-Integrationstest
 
-Neben diesen zwei Strategien existiert auch eine Mischung aus beiden – das Hybrid-Integrationstest. Hier werden obere und untere Module gleichzeitig inte­griert getestet. Dazu werden sowohl Stubs als auch Drivers eingesetzt.
+Neben diesen zwei Strategien existiert auch eine Mischung aus beiden – der Hybrid-Integrationstest. Hier werden obere und untere Module gleichzeitig inte­griert getestet. Dazu werden sowohl Stubs als auch Drivers eingesetzt.
 
 ![Hybrid](./hybrid.png)
 
@@ -101,6 +101,6 @@ Quelle: <https://www.guru99.com/integration-testing.html>
 
 ### Integrationstests vs. Unittests und funktionale End-To-End Tests
 
-In jeder Testumgebung sind alle drei Arten des Testens sehr wichtig und schlie­ßen sich nicht gegenseitig aus. Der grundlegende Unterschied liegt in der hier­archischen Reihenfolge, nach der diese erfolgen sollten. Das bedeutet, dass wenn Integrationstests durchgeführt werden, müssen davor alle Unittests er­folgreich ausgeführt worden sein bzw. für die funktionalen End-to-End Tests ist das erfolgreiche Bestehen der Integrationstests notwendig. Der Hintergrund dieser Sequenz ist, dass bei Unittests der Code einzelner Komponenten sehr effektiv und zielgenau isoliert auf seine Richtigkeit und Anwendbarkeit geprüft wird. Damit wird die Basisfunktionalität dieser Komponenten sichergestellt. Im zweiten Schritt werden die unterschiedlichen Module miteinander vernetzt und somit wird die reibungslose Kommunikation zwischen diesen überprüft. Erst am Ende werden funktionale End-To-End Tests durchgeführt, die als eine Art von kundennahen Interaktionstests interpretiert werden können, die die übergrei­fenden Geschäftsabläufe gemäß den fachlichen Anforderungen funktional über­prüfen und deshalb erst ausgeführt werden sollen, wenn die einzelnen System­bestandteil richtig integriert sind. Auch die Komplexität der Tests und deren Ausführungsdauer steigt rapide in der dargestellten Reihenfolge. Zu einem er­folgreichen Testprozess gehören alles 3 Teststufen dazu, da sie miteinander kor­relieren und sich beim sorgfältigen Design optimal ergänzen.
+In jeder Testumgebung sind alle drei Arten des Testens sehr wichtig und schlie­ßen sich nicht gegenseitig aus. Der grundlegende Unterschied liegt in der hier­archischen Reihenfolge, nach der diese erfolgen sollten. Das bedeutet, dass wenn Integrationstests durchgeführt werden, müssen davor alle Unittests er­folgreich ausgeführt worden sein bzw. für die funktionalen End-to-End Tests ist das erfolgreiche Bestehen der Integrationstests notwendig. Der Hintergrund dieser Sequenz ist, dass bei Unittests der Code einzelner Komponenten sehr effektiv und zielgenau isoliert auf seine Richtigkeit und Anwendbarkeit geprüft wird. Damit wird die Basisfunktionalität dieser Komponenten sichergestellt. Im zweiten Schritt werden die unterschiedlichen Module miteinander vernetzt und somit wird die reibungslose Kommunikation zwischen diesen überprüft. Erst am Ende werden funktionale End-To-End Tests durchgeführt, die als eine Art von kundennahen Interaktionstests interpretiert werden können, die die übergrei­fenden Geschäftsabläufe gemäß den fachlichen Anforderungen funktional über­prüfen und deshalb erst ausgeführt werden sollen, wenn die einzelnen System­bestandteile richtig integriert sind. Auch die Komplexität der Tests und deren Ausführungsdauer steigt rapide in der dargestellten Reihenfolge. Zu einem er­folgreichen Testprozess gehören alles 3 Teststufen dazu, da sie miteinander kor­relieren und sich beim sorgfältigen Design optimal ergänzen.
 
 ![E2E](./e2e.png)

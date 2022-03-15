@@ -53,7 +53,7 @@ In the [workdir package](src/test/java/com/gepardec/tdd/workdir) you already fin
 
 ### Step 1: Stubbing
 
-Implement the already in [BookBusinessImplStubTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplStubTest.java) present test, which should test
+Implement the test already present in [BookBusinessImplStubTest](src/test/java/com/gepardec/tdd/workdir/BookBusinessImplStubTest.java), which should test
 `BookBusinessImpl.retrieveAllJavaBookTitles(...)` by using [BookServiceStub](src/test/java/com/gepardec/tdd/workdir/BookServiceStub.java) to control the data returned by the external service.
 
 ### Step 2: Mockito
