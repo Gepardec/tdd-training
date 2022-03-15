@@ -106,7 +106,7 @@ public class UserEndpointTest extends JerseyTest {
      */
     @Test
     public void deleteUser() {
-        final Response response = null; //TODO: write the request + entity
+        final Response response = null; //TODO: write the request
         boolean content = response.readEntity(Boolean.class);
     
         assertEquals(Status.OK.getStatusCode(), response.getStatus());

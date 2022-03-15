@@ -19,7 +19,7 @@ public class BookBusinessImpl {
                 .collect(Collectors.toList());
     }
 
-    public void deleteAllNoneJavaBooks(String user) {
+    public void deleteAllNonJavaBooks(String user) {
         bookService.retrieveAllBookTitles(user).stream()
                 .filter(b -> !b.toLowerCase().contains(JAVA_STRING))
                 .forEach(b -> bookService.deleteBook(user, b));

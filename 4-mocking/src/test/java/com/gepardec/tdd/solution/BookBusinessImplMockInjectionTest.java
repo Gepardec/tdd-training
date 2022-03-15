@@ -4,11 +4,9 @@ import com.gepardec.tdd.BookBusinessImpl;
 import com.gepardec.tdd.BookService;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.List;
 
@@ -74,7 +72,7 @@ public class BookBusinessImplMockInjectionTest {
 
         when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
 
-        bookBusiness.deleteAllNoneJavaBooks("gepard");
+        bookBusiness.deleteAllNonJavaBooks("gepard");
 
         verify(bookService).deleteBook("gepard", "Learn Python the Hard Way");
 
@@ -93,7 +91,7 @@ public class BookBusinessImplMockInjectionTest {
 
         Mockito.when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
 
-        bookBusiness.deleteAllNoneJavaBooks("gepard");
+        bookBusiness.deleteAllNonJavaBooks("gepard");
         Mockito.verify(bookService).deleteBook(eq("gepard"), argumentCaptor.capture());
 
         assertEquals("Learn Python the Hard Way", argumentCaptor.getValue());

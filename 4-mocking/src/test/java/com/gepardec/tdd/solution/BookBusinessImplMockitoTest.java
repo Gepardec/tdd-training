@@ -66,7 +66,7 @@ public class BookBusinessImplMockitoTest {
         when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
         BookBusinessImpl bookBusiness = new BookBusinessImpl(bookService);
 
-        bookBusiness.deleteAllNoneJavaBooks("gepard");
+        bookBusiness.deleteAllNonJavaBooks("gepard");
 
         verify(bookService).deleteBook("gepard", "Learn Python the Hard Way");
 
@@ -90,7 +90,7 @@ public class BookBusinessImplMockitoTest {
         Mockito.when(bookService.retrieveAllBookTitles("gepard")).thenReturn(allBookTitles);
         BookBusinessImpl bookBusiness = new BookBusinessImpl(bookService);
 
-        bookBusiness.deleteAllNoneJavaBooks("gepard");
+        bookBusiness.deleteAllNonJavaBooks("gepard");
         Mockito.verify(bookService).deleteBook(eq("gepard"), argumentCaptor.capture());
 
         assertEquals("Learn Python the Hard Way", argumentCaptor.getValue());
