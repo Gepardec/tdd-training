@@ -26,13 +26,13 @@ For integration testing there exist multiple frameworks, which can be used to sp
 ### DB-Unit -> [link](dbunit)
 
 DBUnit is a framework that is used to reset a database to a known state between tests.
-It has the ability to import and export the from and to XML datasets.
-You can also use it to compare parts of your database to a expected XML dataset.
+It has the ability to import and export from and to XML datasets.
+You can also use it to compare parts of your database to an expected XML dataset.
 
 ### Jersey-Test -> [link](jersey)
 
 Jersey-Test is a framework made for testing rest services.
-You can simply call an url like you would call it from Postman (or similar) and then assert the results.
+You can simply call an url like you would from Postman (or similar) and then assert the results.
 
 ### Warp-Unit
 
