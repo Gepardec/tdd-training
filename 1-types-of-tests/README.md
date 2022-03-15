@@ -57,7 +57,7 @@ Auch gibt es mehrere Strategien bei der Umsetzung der Integrationstests, wie z.B
 
 #### 1. Top-Down-Testing
 
-Bei diesem Ansatz fängt man mit der Integration der Module auf den oberen Stufen, die hochgranulare Geschäftsmodule abbilden, an und erweitert diese Tests Schritt für Schritt bis hin zu Modulen auf den niedrigsten Stufen, die feingranulare Aspekte einer Applikation implementieren. Solange die Module auf untersten Ebenen nicht existieren, können Sie durch die Verwendung von “Stubs” simu­liert werden.
+Bei diesem Ansatz fängt man mit der Integration der Module auf den oberen Stufen, die hochgranulare Geschäftsmodule abbilden, an und erweitert diese Tests Schritt für Schritt bis hin zu Modulen auf den niedrigsten Stufen, die feingranulare Aspekte einer Applikation implementieren. Solange die Module auf untersten Ebenen nicht existieren, können sie durch die Verwendung von “Stubs” simu­liert werden.
 
 ![Top Down](./top_down.png)
 
