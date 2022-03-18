@@ -133,7 +133,7 @@ public class UserEndpointTest extends JerseyTest {
             ; //TODO: write the request + entity
             fail("Request succeeded");
         } catch(ProcessingException e) {
-            assertEquals("java.net.ProtocolException: Invalid HTTP method: PATCH", e.getMessage());
+            assertTrue(e.getMessage().contains("Invalid HTTP method: PATCH"));
         }
 
     }
